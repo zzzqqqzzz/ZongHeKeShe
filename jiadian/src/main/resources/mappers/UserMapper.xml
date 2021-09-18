@@ -10,7 +10,7 @@
     </select>
 
     <insert id="insertUser">
-        insert into user(username,password,role) value (#{user.username},#{user.password},#{user.role})
+        insert into user(username,password,role) value (#{username},#{password},#{role})
     </insert>
 
     <select id="getUser" resultType="com.zzz.jiadian.entity.User">

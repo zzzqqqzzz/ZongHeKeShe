@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace='com.zzz.jiadian.dao.CtmMsgDao'>
+
+    <insert id="insertCtmMsg" >
+        insert into ctm_msg (uid,phonenum,name,sex,county,province,city,det_address)
+        value(#{uid},#{phonenum},#{name},#{sex},#{county},#{province},#{city},#{detAddress})
+    </insert>
+</mapper>
