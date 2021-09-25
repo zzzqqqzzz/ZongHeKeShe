@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace='com.zzz.jiadian.dao.CartDao'>
+
+    <insert id="insertCart">
+        insert into cart(cart_id,uid,goods_inf_id,num,price) value(#{cartId},#{uid},#{goodsInfId},#{num},#{price})
+    </insert>
+
+    <select id="selectByUidAndGoodsInfId" resultType="com.zzz.jiadian.entity.Cart">
+        select cart_id, uid, goods_inf_id, num, price from cart where uid=#{uid} and goods_inf_id=#{goodsInfId}
+    </select>
+
+    <select id="selectByUid" resultType="com.zzz.jiadian.entity.Cart">
+        select cart_id, uid, goods_inf_id, num, price from cart where uid=#{uid}
+    </select>
+
+    <delete id="deleteCartById">
+        delete from cart where cart_id = #{id}
+    </delete>
+
+    <delete id="deleteCartByIds">
+        delete from cart where cart_id in
+        <foreach collection="array" open="(" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

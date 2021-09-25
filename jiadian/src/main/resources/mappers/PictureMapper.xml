@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace='com.zzz.jiadian.dao.PictureDao'>
+
+    <select id="selectPictureById" resultType="com.zzz.jiadian.entity.Picture">
+        select pid,address,seq from picture where pid = #{pid}
+    </select>
+
+    <select id="selectPictureByGid" resultType="com.zzz.jiadian.entity.Picture">
+        select pid,address,seq from picture where gid = #{gid}
+    </select>
+</mapper>

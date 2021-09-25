@@ -1,34 +1,19 @@
 package com.zzz.jiadian.entity;
 
 public class Cart {
-    private int cratId;
-    private int cid;
-    private GoodsInf goodsInf;
+    private int cartId;
+    private int uid;
+    private int goodsInfId;
     private int num;
+    //单价
     private double price;
 
-    public int getCratId() {
-        return cratId;
+    public int getCartId() {
+        return cartId;
     }
 
-    public void setCratId(int cratId) {
-        this.cratId = cratId;
-    }
-
-    public int getCid() {
-        return cid;
-    }
-
-    public void setCid(int cid) {
-        this.cid = cid;
-    }
-
-    public GoodsInf getGoodsInf() {
-        return goodsInf;
-    }
-
-    public void setGoodsInf(GoodsInf goodsInf) {
-        this.goodsInf = goodsInf;
+    public void setCartId(int cartId) {
+        this.cartId = cartId;
     }
 
     public int getNum() {
@@ -46,4 +31,21 @@ public class Cart {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public int getGoodsInfId() {
+        return goodsInfId;
+    }
+
+    public void setGoodsInfId(int goodsInfId) {
+        this.goodsInfId = goodsInfId;
+    }
+
 }

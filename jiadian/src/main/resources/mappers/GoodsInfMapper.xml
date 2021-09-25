@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace='com.zzz.jiadian.dao.GoodsInfDao'>
+
+    <select id="getGoodsInfByGid" resultType="com.zzz.jiadian.entity.GoodsInf">
+        select goodsd_inf.goods_inf_id,goodsd_inf.name,goodsd_inf.price,goodsd_inf.color,goodsd_inf.inventory,goodsd_inf.limit,goodsd_inf.origin_address,goodsd_inf.supplier,goodsd_inf.date
+         from goodsd_inf,goods_goods_inf
+         where goods_goods_inf.gid = #{gid} and goods_goods_inf.goods_inf_id = goodsd_inf.goods_inf_id
+    </select>
+
+</mapper>

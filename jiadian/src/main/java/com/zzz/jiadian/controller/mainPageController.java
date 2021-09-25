@@ -2,6 +2,8 @@ package com.zzz.jiadian.controller;
 
 import com.zzz.jiadian.annotations.PassToken;
 import com.zzz.jiadian.entity.Goods;
+import com.zzz.jiadian.entity.GoodsPic;
+import com.zzz.jiadian.service.impl.GoodsPicServiceImpl;
 import com.zzz.jiadian.service.impl.GoodsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,13 +18,13 @@ import java.util.Map;
 @RequestMapping("/main")
 public class mainPageController {
     @Autowired
-    GoodsServiceImpl goodsService;
+    GoodsPicServiceImpl goodsPicService;
 
     @PassToken
     @GetMapping("/getGoods")
     public Map getGoods(){
         Map<String,Object> resultMap = new HashMap<>(1);
-        ArrayList<Goods> goodsList = goodsService.selectAllGoods();
+        ArrayList<GoodsPic> goodsList = goodsPicService.selectAll();
         resultMap.put("goods",goodsList);
         return resultMap;
     }

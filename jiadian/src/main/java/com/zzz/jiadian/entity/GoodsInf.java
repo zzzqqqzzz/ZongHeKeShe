@@ -9,10 +9,9 @@ public class GoodsInf {
     private String color;
     private int inventory;
     private int limit;
-    private String origin_address;
+    private String originAddress;
     private String supplier;
     private Date date;
-    private int status;
 
     public int getGoodsInfId() {
         return goodsInfId;
@@ -62,13 +61,6 @@ public class GoodsInf {
         this.limit = limit;
     }
 
-    public String getOrigin_address() {
-        return origin_address;
-    }
-
-    public void setOrigin_address(String origin_address) {
-        this.origin_address = origin_address;
-    }
 
     public String getSupplier() {
         return supplier;
@@ -86,11 +78,11 @@ public class GoodsInf {
         this.date = date;
     }
 
-    public int getStatus() {
-        return status;
+    public String getOriginAddress() {
+        return originAddress;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setOriginAddress(String originAddress) {
+        this.originAddress = originAddress;
     }
 }
